@@ -3,7 +3,8 @@ from nba_api.stats.endpoints import leagueleaders
 # Basic Request
 leaders = leagueleaders.LeagueLeaders(
         per_mode48 = "PerGame",
-        stat_category_abbreviation = "PTS"
+        stat_category_abbreviation = "PTS",
+        season = "2020-21"
     )
 
 thisdict = leaders.get_dict()
