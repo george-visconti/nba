@@ -3,12 +3,12 @@ class Player:
     #Initializing Fields
     def __init__(self,name,team,stat_category,stat):
         self.name = name
-        self.team = team,
+        self.team = team
         self.stat_category = stat_category
         self.stat = stat
 
     # The following methods return the value of a given field
-    
+
     def name(self):
         return self.name
 
