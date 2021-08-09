@@ -1,1 +1,1 @@
-# nba
+As a college basketball who has invested ample time into the game and an advid NBA fan I thought it would be interesting to do a personal project that incorporates a passion of mine. The goal of this project is to use the NBA API and sift through the returned json objects to get the statistic leaders of points, assists, rebounds, blocks, and steals per game. I create a dictionary of all the statistic leaders and output it to a url using Flask. 
