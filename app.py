@@ -43,7 +43,7 @@ def get_leader(category):
     return Player(
         name = stat_leader[2],
         team = stat_leader[3],
-        stat_category = category,
+        stat_category = category[0] + "PG",
         stat = stat
     )
 
