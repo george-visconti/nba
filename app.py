@@ -47,7 +47,7 @@ def get_leader(category):
         stat = stat
     )
 
-@app.route("/stat_leaders")
+@app.route("/")
 def hello_world():
 
     ppg = get_leader("PTS")
