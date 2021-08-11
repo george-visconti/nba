@@ -6,3 +6,8 @@ What has been done so far:
   - Created a simple flask application to use the NBA API to get the stat leaders of the 5 major categories
   - The flask app writes the leaders to an endpoint in json format
   
+To Do's:
+  - Deploy the flask application
+  - Create the react app
+  - Fetch the data
+  - Display the data
