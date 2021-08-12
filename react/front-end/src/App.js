@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react';
+
+
+
+async function getData(setMyData){
+  const req = await fetch('https://nba-stat-leaders-endpoint.herokuapp.com/');
+  console.log(req);
+  const reqJson = await req.json();
+  setMyData(reqJson);
+}
+function Data(){
+  const [myData,setMyData] = useState([]);
+  useEffect(() => {
+    getData(setMyData);
+  }, []);
+  return(
+    <>
+    <p>
+      In Data
+      {myData}
+    </p>
+    </>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           This application will display the NBA stat leaders from the 2020-2021 season. 
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Data />
+        
     </div>
   );
 }
