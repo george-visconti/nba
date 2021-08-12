@@ -1,9 +1,11 @@
 from flask import Flask
+from flask_cors import CORS
 from nba_api.stats.endpoints import leagueleaders
 from player import Player
 
 
 app = Flask(__name__)
+CORS(app)
 
 def get_leader(category):
 
