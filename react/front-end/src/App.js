@@ -3,14 +3,18 @@ import React, { useState, useEffect } from 'react';
 
 
 
+
 async function getData(setMyData){
   const req = await fetch('https://nba-stat-leaders-endpoint.herokuapp.com/');
-  console.log(req);
-  const reqJson = await req.json();
+  const reqText = await req.text();
+  const newText = reqText.replace(/'/g, '"');
+  const reqJson = JSON.parse(newText);
   setMyData(reqJson);
+  
 }
 function Data(){
-  const [myData,setMyData] = useState([]);
+  
+  const [myData,setMyData] = useState({});
   useEffect(() => {
     getData(setMyData);
   }, []);
@@ -18,7 +22,7 @@ function Data(){
     <>
     <p>
       In Data
-      {myData}
+      {myData.ppg}
     </p>
     </>
   );
