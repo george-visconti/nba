@@ -2,7 +2,15 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 
 
-
+function DisplayPlayer(props){
+    if(!props.playerObj){
+      return <div></div>;
+    }
+    return (
+      <p>{props.playerObj.name}</p>
+    );
+  
+}
 
 async function getData(setMyData){
   const req = await fetch('https://nba-stat-leaders-endpoint.herokuapp.com/');
@@ -11,7 +19,7 @@ async function getData(setMyData){
 
   const newText = reqText.replace(/'/g, '"');
   const reqJson = JSON.parse(newText);
-  console.log(reqJson);
+  //console.log(reqJson);
   setMyData(reqJson);
   
 }
@@ -21,27 +29,19 @@ function Data(){
   useEffect(() => {
     getData(setMyData);
   }, []);
-  // return (
-  //   <>
-  //     <div className="stock-container">
-  //       {myData.map((data, key) => {
-  //         return (
-  //           <div key={key}>
-  //             {data.name +
-  //               " , " +
-  //               data.team +
-  //               " ," +
-  //               data.category +
-  //               ", " +
-  //               data.stat}
-  //           </div>
-  //         );
-  //       })}
-  //     </div>
-  //   </>
-  // );
+
+  const ppg= myData[0];
+  // const apg= myData[1];
+  // const rpg= myData[2];
+  // const bpg= myData[3];
+  // const spg= myData[4];
+  
   return(
     <>
+      <div>
+        <DisplayPlayer playerObj={ppg} /> 
+        
+      </div>
     </>
   );
 };
