@@ -23,7 +23,9 @@ function Data(){
     <>
     <p>
       In Data
-      {myData}
+      {Object.keys(myData).map((key, index) => ( 
+          <p key={index}> this is my key {key} and this is my value {myData[key]}</p> 
+        ))}
     </p>
     </>
   );
