@@ -9,7 +9,7 @@ async function getData(setMyData){
   const reqText = await req.text();
   const newText = reqText.replace(/'/g, '"');
   const reqJson = JSON.parse(newText);
-  console.log(reqJson);
+  // console.log(reqJson);
   setMyData(reqJson);
   
 }

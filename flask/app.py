@@ -58,38 +58,37 @@ def hello_world():
     bpg = get_leader("BLK")
     spg = get_leader("STL")
 
-    leaders = {
-        "ppg": {
+    leaders = [
+        {
             "name": ppg.name,
             "team": ppg.team,
             "category": ppg.stat_category,
             "stat": ppg.stat
         },
-        "apg": {
+        {
             "name": apg.name,
             "team": apg.team,
             "category": apg.stat_category,
             "stat": apg.stat
         },
-        "rpg": {
+        {
             "name": rpg.name,
             "team": rpg.team,
             "category": rpg.stat_category,
             "stat": rpg.stat
         },
-        "bpg": {
+        {
             "name": bpg.name,
             "team": bpg.team,
             "category": bpg.stat_category,
             "stat": bpg.stat
         },
-        "spg": {
+        {
             "name": spg.name,
             "team": spg.team,
             "category": spg.stat_category,
             "stat": spg.stat
-        }
-        
-    }
+        }   
+    ]
 
     return f"{leaders}"
