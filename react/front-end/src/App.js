@@ -1,5 +1,17 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { CardContainer, Page, CardRow, Info, Picture, HeaderText, Logo, Court} from './AppElements';
+import curry from './images/stephen_curry.png';
+import westbrook from './images/russell_westbrook.png';
+import capela from './images/clint_capela.png';
+import turner from './images/myles_turner.png';
+import butler from './images/jimmy_butler.png';
+import warriors from './images/GSW.svg';
+import wizards from './images/WAS.svg';
+import hawks from './images/ATL.svg';
+import pacers from './images/IND.svg';
+import heat from './images/MIA.svg';
+import court from './images/court.png';
 
 
 function DisplayPlayer(props){
@@ -7,7 +19,19 @@ function DisplayPlayer(props){
       return <div></div>;
     }
     return (
-      <p>{props.playerObj.name}</p>
+      
+      <CardContainer>
+        <Court src={court}/>
+        <Picture src={props.img}></Picture>
+        <Info>Category: {props.playerObj.category}</Info>
+        <Info>Name: {props.playerObj.name}</Info>
+        <Info>
+          Team: {props.playerObj.team}
+          <Logo src={props.teamImg}/>
+        </Info>
+        <Info>Stat: {props.playerObj.stat} {props.playerObj.category}</Info>
+      </CardContainer>
+      
     );
   
 }
@@ -30,31 +54,31 @@ function Data(){
     getData(setMyData);
   }, []);
 
-  const ppg= myData[0];
-  // const apg= myData[1];
-  // const rpg= myData[2];
-  // const bpg= myData[3];
-  // const spg= myData[4];
+  
   
   return(
-    <>
-      <div>
-        <DisplayPlayer playerObj={ppg} /> 
-        
-      </div>
-    </>
+    
+      <CardRow>
+        <DisplayPlayer playerObj={myData[0]} img={curry} teamImg={warriors}/> 
+        <DisplayPlayer playerObj={myData[1]} img={westbrook} teamImg={wizards}/>
+        <DisplayPlayer playerObj={myData[2]} img={capela} teamImg={hawks}/>
+        <DisplayPlayer playerObj={myData[3]} img={turner} teamImg={pacers}/>
+        <DisplayPlayer playerObj={myData[4]} img={butler} teamImg={heat}/>
+      </CardRow>
+    
   );
 };
 
 function App() {
   return (
-    <div className="App">
-        <p>
-          This application will display the NBA stat leaders from the 2020-2021 season. 
-        </p>
-        <Data />
-        
-    </div>
+    
+    <Page>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"/>
+      <HeaderText>NBA 2020-2021 Season Stat Leaders </HeaderText>
+      
+      <Data />
+      
+    </Page>
   );
 }
 
