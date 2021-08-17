@@ -75,7 +75,6 @@ function App() {
     <Page>
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"/>
       <HeaderText>NBA 2020-2021 Season Stat Leaders </HeaderText>
-      
       <Data />
       
     </Page>

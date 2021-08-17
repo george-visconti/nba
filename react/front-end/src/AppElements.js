@@ -27,9 +27,10 @@ export const CardRow= styled.div`
     display:flex;
     flex-direction:row;
     justify-content: space-between;
+    align-items:center;
     min-height:100vh;
     width:100%;
-    margin-top:60px;
+    margin-top: -50px;
     @media (max-width: 1024px){
         flex-direction:column;
         margin-top:40px;
@@ -56,10 +57,11 @@ export const HeaderText= styled.p`
     text-decoration:underline;
     text-decoration-thickness: 2px;
     font-family: 'Open Sans', sans-serif;
-    margin-top: 25px;
+    margin-top: 60px;
+    font-weight: bold;
     @media (max-width: 600px){
         font-size: 18px;
-        font-weight: bold;
+        
     }
 `
 
@@ -69,13 +71,7 @@ export const Logo= styled.img`
    
 
 `
-export const Court= styled.img`
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
-    opacity: 0.4;
-`
+
 
 
 
