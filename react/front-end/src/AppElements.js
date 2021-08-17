@@ -58,10 +58,10 @@ export const HeaderText= styled.p`
     text-decoration-thickness: 2px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 75px;
     @media (max-width: 600px){
         font-size: 18px;
-        
+        margin-bottom:0px;
     }
 `
 
