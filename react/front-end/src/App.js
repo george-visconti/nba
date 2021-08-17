@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { CardContainer, Page, CardRow, Info, Picture, HeaderText, Logo, Court} from './AppElements';
+import { CardContainer, Page, CardRow, Info, Picture, HeaderText, Logo} from './AppElements';
 import curry from './images/stephen_curry.png';
 import westbrook from './images/russell_westbrook.png';
 import capela from './images/clint_capela.png';
@@ -11,7 +11,7 @@ import wizards from './images/WAS.svg';
 import hawks from './images/ATL.svg';
 import pacers from './images/IND.svg';
 import heat from './images/MIA.svg';
-import court from './images/court.png';
+
 
 
 function DisplayPlayer(props){
@@ -21,7 +21,7 @@ function DisplayPlayer(props){
     return (
       
       <CardContainer>
-        <Court src={court}/>
+        
         <Picture src={props.img}></Picture>
         <Info>Category: {props.playerObj.category}</Info>
         <Info>Name: {props.playerObj.name}</Info>

@@ -1,8 +1,8 @@
 import styled from 'styled-components'; 
-
+import court from './images/court.png';
 
 export const CardContainer= styled.div`
-    position:relative;
+    background: gray;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -10,7 +10,8 @@ export const CardContainer= styled.div`
     width: 200px;
     align-items:center;
     margin-bottom:20px;
-   
+    background-image: url(${court});
+    background-position: center;
 `
 
 export const Page= styled.div`
@@ -18,16 +19,16 @@ export const Page= styled.div`
         flex-direction:column;
         align-items: center;
         justify-content:center;
-        height:100vh;
         width:100%;
+        background: #479bf5;
 `
 
 export const CardRow= styled.div`
     display:flex;
     flex-direction:row;
     justify-content: space-between;
-    height:90%;
-    width:100vw;
+    min-height:100vh;
+    width:100%;
     margin-top:60px;
     @media (max-width: 1024px){
         flex-direction:column;
@@ -37,7 +38,7 @@ export const CardRow= styled.div`
 `
 
 export const Info= styled.p`
-    z-index:2;
+    font-weight: 950;
     margin-top: auto;
     font-family: 'Open Sans', sans-serif;
     display:flex;
@@ -45,7 +46,7 @@ export const Info= styled.p`
 `
 
 export const Picture= styled.img`
-    z-index:2;
+    
 
 `
 
@@ -55,7 +56,8 @@ export const HeaderText= styled.p`
     text-decoration:underline;
     text-decoration-thickness: 2px;
     font-family: 'Open Sans', sans-serif;
-    @media (max-width: 500px){
+    margin-top: 25px;
+    @media (max-width: 600px){
         font-size: 18px;
         font-weight: bold;
     }
@@ -64,7 +66,7 @@ export const HeaderText= styled.p`
 export const Logo= styled.img`
     width:25px;
     height:25px;
-    z-index:2;
+   
 
 `
 export const Court= styled.img`
