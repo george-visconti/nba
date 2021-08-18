@@ -72,6 +72,12 @@ export const Logo= styled.img`
 
 `
 
+export const Name= styled.div`
+    display: -webkit-inline-box;
+    -webkit-line-clamp:1;
+
+`
+
 
 
 
