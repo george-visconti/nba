@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { CardContainer, Page, CardRow, Info, Picture, HeaderText, Logo} from './AppElements';
+import { CardContainer, Page, CardRow, Info, Picture, HeaderText, Logo, Name} from './AppElements';
 import curry from './images/stephen_curry.png';
 import westbrook from './images/russell_westbrook.png';
 import capela from './images/clint_capela.png';
@@ -24,7 +24,7 @@ function DisplayPlayer(props){
         
         <Picture src={props.img}></Picture>
         <Info>Category: {props.playerObj.category}</Info>
-        <Info>Name: {props.playerObj.name}</Info>
+        <Name>Name: {props.playerObj.name} </Name>
         <Info>
           Team: {props.playerObj.team}
           <Logo src={props.teamImg}/>
