@@ -45,6 +45,7 @@ export const Info= styled.p`
     font-family: 'Open Sans', sans-serif;
     display:flex;
     align-items:center;
+    white-space: nowrap;
 `
 
 export const Picture= styled.img`
@@ -72,15 +73,7 @@ export const Logo= styled.img`
 
 `
 
-export const Name= styled.div`
-    display: -webkit-inline-box;
-    -webkit-line-clamp:1;
-    font-weight: 950;
-    margin-top: auto;
-    font-family: 'Open Sans', sans-serif;
-    display:flex;
-    align-items:center;
-`
+
 
 
 
